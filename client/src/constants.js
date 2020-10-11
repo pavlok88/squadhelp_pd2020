@@ -3,6 +3,7 @@ const serverIP = 'localhost';
 const serverPort = env === 'production' ? 3000 : 9632;
 
 export default {
+  PHONE_NUMBER:"(877)355-3585",
   CUSTOMER: 'customer',
   CREATOR: 'creator',
   CONTEST_STATUS_ACTIVE: 'active',
