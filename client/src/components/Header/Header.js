@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
 import CONSTANTS from '../../constants';
 import {getUserAction, clearUserStore, headerRequest} from '../../actions/actionCreator';
+import LinkLogo from '../LinkLogo';
 
 
 class Header extends React.Component {
@@ -79,9 +80,7 @@ class Header extends React.Component {
                     </div>
                 </div>
                 <div className={styles.navContainer}>
-                    <a href={"/"}>
-                        <img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt='blue_logo'/>
-                    </a>
+                    <LinkLogo className={styles.logo} alt='blue_logo' src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} />
                     <div className={styles.leftNav}>
                         <div className={styles.nav}>
                             <ul>
