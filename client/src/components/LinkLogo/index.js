@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import CONSTANTS from '../../constants.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -17,4 +16,7 @@ LinkLogo.propTypes = {
     src: PropTypes.string,
     alt: PropTypes.string,
 };
+LinkLogo.defaultProps = {
+   to:'/'
+}
 export default LinkLogo;
