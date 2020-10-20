@@ -150,7 +150,7 @@ class ContestForm extends React.Component {
 
     render() {
         const {isFetching, error} = this.props.dataForContest;
-        const {handleSubmit} = this.props;
+        const {handleSubmit, submitting} = this.props;
         if (error)
            return <TryAgain getData={this.getPreference}/>;
         else

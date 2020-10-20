@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Header.module.sass';
 import {connect} from 'react-redux';
 import {Link, withRouter} from 'react-router-dom';
-import CONSTANTS from '../../constants';
-import {clearUserStore, headerRequest} from '../../actions/actionCreator';
+import CONSTANTS, {PHONE_NUMBER} from '../../constants';
+import {getUserAction, clearUserStore, headerRequest} from '../../actions/actionCreator';
 import LinkLogo from '../LinkLogo';
 
 
@@ -69,19 +69,18 @@ class Header extends React.Component {
                     <a href="http://www.google.com">Read Announcement</a>
                 </div>
                 <div className={styles.loginSignnUpHeaders}>
-                    <div className={styles.numberContainer}>
-                        <a href={`tel:${CONSTANTS.PHONE_NUMBER}`}>
+                    <a href={`tel:${PHONE_NUMBER}`}
+                        className={styles.numberContainer}>
                         <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt='phone'/>
-                           <span>{CONSTANTS.PHONE_NUMBER}</span>
-                        </a>
-                    </div>
+                        <span>&nbsp;&nbsp;{PHONE_NUMBER}</span>
+                    </a>
                     <div className={styles.userButtonsContainer}>
                         {this.renderLoginButtons()}
                     </div>
                 </div>
                 <div className={styles.navContainer}>
-                    <LinkLogo className={styles.logo} alt='blue_logo' src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} />
-                    <div className={styles.leftNav}>
+                    <LinkLogo className={styles.logo} alt='blue_logo' />
+                        <div className={styles.leftNav}>
                         <div className={styles.nav}>
                             <ul>
                                 <li>

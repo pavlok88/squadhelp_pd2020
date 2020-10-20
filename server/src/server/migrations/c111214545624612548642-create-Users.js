@@ -53,14 +53,14 @@ module.exports = {
         defaultValue: 0,
       },
     })
-/*       .then(() => queryInterface.addConstraint('Users', ['balance'], {
+      .then(() => queryInterface.addConstraint('Users', ['balance'], {
         type: 'check',
         where: {
           balance: {
             [ Sequelize.Op.gte ]: 0,
           },
         },
-      })); */
+      }));
   },
   down: (queryInterface, Sequelize) => {
     return queryInterface.dropTable('Users');

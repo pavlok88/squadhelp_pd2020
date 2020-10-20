@@ -7,7 +7,8 @@ import {
     changeMark,
     clearChangeMarkError,
     goToExpandedDialog,
-    changeShowImage
+    changeShowImage,
+    changeModalShow
 } from '../../actions/actionCreator';
 import {withRouter} from 'react-router-dom';
 import isEqual from 'lodash/isEqual';

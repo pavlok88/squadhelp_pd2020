@@ -36,6 +36,7 @@ class LoginForm extends React.Component {
                 {error && <Error data={error.data} status={error.status} clearError={authClear}/>}
                 <h2>LOGIN TO YOUR ACCOUNT</h2>
                 <form onSubmit={handleSubmit(this.clicked)}>
+                    <div className={styles.inputContainer}>
                     <Field
                         name='email'
                         classes={formInputClasses}
@@ -50,6 +51,7 @@ class LoginForm extends React.Component {
                         type='password'
                         label='password'
                     />
+                    </div>
                     <button type='submit' disabled={submitting} className={styles.submitContainer}>
                         <span className={styles.inscription}>{isFetching ? 'Submitting...' : 'LOGIN'}</span>
                     </button>

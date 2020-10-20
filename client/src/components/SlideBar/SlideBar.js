@@ -5,7 +5,7 @@ import carouselConstants from '../../carouselConstants';
 import './flickity.css';
 
 
-const SliderBar = ({carouselType,...props}) => {
+const SliderBar = props => {
     const options = {
         draggable: true,
         wrapAround: true,
@@ -17,7 +17,8 @@ const SliderBar = ({carouselType,...props}) => {
     };
 
     const getStyleName = () => {
-             switch (carouselType) {
+        const {carouselType} = props;
+        switch (carouselType) {
             case carouselConstants.MAIN_SLIDER:
                 return style.mainCarousel;
             case carouselConstants.EXAMPLE_SLIDER:
@@ -29,6 +30,7 @@ const SliderBar = ({carouselType,...props}) => {
 
 
     const renderSlides = () => {
+        const {carouselType} = props;
         switch (carouselType) {
             case carouselConstants.MAIN_SLIDER: {
                 return Object.keys(props.images).map((key, index) => {
